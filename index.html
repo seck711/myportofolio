@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio d'Abdoulaye Seck - Ingénieur Full Stack spécialisé en Java, Spring Boot et Angular">
     <title>Abdoulaye Seck - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand">AS</div>
+            <a href="#home" class="nav-brand">
+                <span class="nav-brand-dot"></span>
+                Abdoulaye Seck
+            </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Accueil</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
@@ -20,7 +30,7 @@
                 <li><a href="#experience" class="nav-link">Expériences</a></li>
                 <li><a href="#projects" class="nav-link">Projets</a></li>
                 <li><a href="#education" class="nav-link">Formation</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -32,54 +42,112 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Disponible pour de nouveaux projets
+                </div>
                 <h1 class="hero-title">
                     <span class="greeting">Bonjour, je suis</span>
                     <span class="name">Abdoulaye Seck</span>
-                    <span class="title">Ingénieur Full Stack</span>
+                    <span class="title">
+                        <span class="title-prefix">&lt;</span>
+                        Ingénieur Full Stack
+                        <span class="title-suffix">/&gt;</span>
+                    </span>
                 </h1>
                 <p class="hero-description">
-                    Spécialisé en développement d'architectures robustes et scalables basées sur 
+                    Spécialisé en développement d'architectures robustes et scalables basées sur
                     <strong>Java</strong>, <strong>Spring Boot</strong> et <strong>Angular</strong>
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Me contacter</a>
-                    <a href="#projects" class="btn btn-secondary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Me contacter
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-folder-open"></i>
+                        Voir mes projets
+                    </a>
                 </div>
                 <div class="social-links">
                     <a href="mailto:secka1348@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+221773031358" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
                 </div>
             </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="code-window">
+                    <div class="code-window-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="code-window-title">Developer.java</span>
+                    </div>
+                    <pre class="code-window-body"><code><span class="code-keyword">public class</span> <span class="code-class">AbdoulayeSeck</span> {
+
+  <span class="code-keyword">private final</span> String role = <span class="code-string">"Full Stack Engineer"</span>;
+  <span class="code-keyword">private final</span> String[] stack = {
+    <span class="code-string">"Java"</span>, <span class="code-string">"Spring Boot"</span>,
+    <span class="code-string">"Angular"</span>, <span class="code-string">"PostgreSQL"</span>
+  };
+
+  <span class="code-keyword">public</span> Solution <span class="code-method">build</span>(Problem p) {
+    <span class="code-keyword">return</span> <span class="code-keyword">new</span> Solution(p)
+      .secure()
+      .scalable()
+      .deliver();
+  }
+}</code></pre>
+                </div>
+            </div>
         </div>
-        <div class="scroll-indicator">
+        <a href="#about" class="scroll-indicator" aria-label="Défiler vers le bas">
+            <span class="scroll-indicator-text">Découvrir</span>
             <i class="fas fa-chevron-down"></i>
-        </div>
+        </a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-number">02</span>
+                <span class="section-number">01</span>
+                <span class="section-line"></span>
                 <span class="section-text">À propos de moi</span>
             </h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>👨🏽‍💻 À propos</h3>
+                    <h3>À propos</h3>
                     <p>
                         Je suis ingénieur en génie logiciel et systèmes d'information diplômé de l'<strong>ESP Dakar</strong>.
-                        Spécialisé en développement Full Stack, j'interviens sur des architectures robustes et scalables 
+                        Spécialisé en développement Full Stack, j'interviens sur des architectures robustes et scalables
                         basées sur Java, Spring Boot et Angular.
                     </p>
                     <p>
-                        J'ai contribué à des projets stratégiques dans les secteurs <strong>bancaire</strong>, 
+                        J'ai contribué à des projets stratégiques dans les secteurs <strong>bancaire</strong>,
                         <strong>fintech</strong> et <strong>habitat social</strong>.
                     </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Années d'expérience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Secteurs clés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
                     <div class="objective">
-                        <h4>🎯 Objectif</h4>
-                        <p>Concevoir des plateformes performantes et sécurisées à forte valeur métier.</p>
+                        <div class="objective-icon"><i class="fas fa-bullseye"></i></div>
+                        <div>
+                            <h4>Objectif</h4>
+                            <p>Concevoir des plateformes performantes et sécurisées à forte valeur métier.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,15 +158,15 @@
     <section id="skills" class="section skills">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-number">03</span>
+                <span class="section-number">02</span>
+                <span class="section-line"></span>
                 <span class="section-text">Compétences techniques</span>
             </h2>
             <div class="skills-grid">
-                <!-- Backend -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-server"></i>
-                        <h3>⚙️ Backend</h3>
+                        <div class="skill-icon-wrap"><i class="fas fa-server"></i></div>
+                        <h3>Backend</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="skill-tag">Java</span>
@@ -112,11 +180,10 @@
                     </div>
                 </div>
 
-                <!-- Frontend -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>🎨 Frontend</h3>
+                        <div class="skill-icon-wrap"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Frontend</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="skill-tag">Angular</span>
@@ -128,11 +195,10 @@
                     </div>
                 </div>
 
-                <!-- DevOps -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>🔄 DevOps & Outils</h3>
+                        <div class="skill-icon-wrap"><i class="fas fa-tools"></i></div>
+                        <h3>DevOps & Outils</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="skill-tag">Git</span>
@@ -145,11 +211,10 @@
                     </div>
                 </div>
 
-                <!-- Automatisation -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>🤖 Automatisation</h3>
+                        <div class="skill-icon-wrap"><i class="fas fa-robot"></i></div>
+                        <h3>Automatisation</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="skill-tag">UiPath</span>
@@ -164,7 +229,8 @@
     <section id="experience" class="section experience">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-number">04</span>
+                <span class="section-number">03</span>
+                <span class="section-line"></span>
                 <span class="section-text">Expériences professionnelles</span>
             </h2>
             <div class="timeline">
@@ -172,9 +238,11 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Ingénieur Full Stack</h3>
-                            <span class="company">Neurotech S.A</span>
-                            <span class="period">2025 – Aujourd'hui</span>
+                            <div class="timeline-header-top">
+                                <h3>Ingénieur Full Stack</h3>
+                                <span class="period">2025 – Aujourd'hui</span>
+                            </div>
+                            <span class="company"><i class="fas fa-building"></i> Neurotech S.A</span>
                         </div>
                         <ul class="timeline-details">
                             <li>Développement plateforme FHS (Habitat Social)</li>
@@ -188,9 +256,11 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Développeur Full Stack & Support IT</h3>
-                            <span class="company">Ecobank Sénégal</span>
-                            <span class="period">2023 – 2025</span>
+                            <div class="timeline-header-top">
+                                <h3>Développeur Full Stack & Support IT</h3>
+                                <span class="period">2023 – 2025</span>
+                            </div>
+                            <span class="company"><i class="fas fa-building"></i> Ecobank Sénégal</span>
                         </div>
                         <ul class="timeline-details">
                             <li>Automatisation Service Desk (-30% temps traitement)</li>
@@ -204,9 +274,11 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Développeur Full Stack</h3>
-                            <span class="company">ATOS</span>
-                            <span class="period">2022 – 2023</span>
+                            <div class="timeline-header-top">
+                                <h3>Développeur Full Stack</h3>
+                                <span class="period">2022 – 2023</span>
+                            </div>
+                            <span class="company"><i class="fas fa-building"></i> ATOS</span>
                         </div>
                         <ul class="timeline-details">
                             <li>Refonte application restauration (+40% performance)</li>
@@ -222,19 +294,23 @@
     <section id="projects" class="section projects">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-number">05</span>
+                <span class="section-number">04</span>
+                <span class="section-line"></span>
                 <span class="section-text">Projets</span>
             </h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-icon">🏠</div>
+                    <div class="project-card-top">
+                        <div class="project-icon-wrap">🏠</div>
+                        <span class="project-badge">En production</span>
+                    </div>
                     <h3>Plateforme Habitat Social (FHS)</h3>
                     <p class="project-description">
-                        Application de gestion des demandes de logement avec workflow de validation 
+                        Application de gestion des demandes de logement avec workflow de validation
                         et dashboard statistiques.
                     </p>
                     <div class="project-features">
-                        <h4>Fonctionnalités :</h4>
+                        <h4>Fonctionnalités</h4>
                         <ul>
                             <li>Gestion utilisateurs</li>
                             <li>Workflow validation</li>
@@ -250,13 +326,16 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-icon">🏦</div>
+                    <div class="project-card-top">
+                        <div class="project-icon-wrap">🏦</div>
+                        <span class="project-badge project-badge-impact">Impact -30%</span>
+                    </div>
                     <h3>Automatisation Service Desk – Ecobank</h3>
                     <p class="project-description">
                         Robotisation des tickets Outlook avec intégration base SQL Server.
                     </p>
                     <div class="project-results">
-                        <h4>Résultats :</h4>
+                        <h4>Résultats</h4>
                         <ul>
                             <li><strong>-30%</strong> temps de traitement</li>
                             <li>Amélioration SLA</li>
@@ -270,13 +349,16 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-icon">📊</div>
+                    <div class="project-card-top">
+                        <div class="project-icon-wrap">📊</div>
+                        <span class="project-badge">Monitoring</span>
+                    </div>
                     <h3>Dashboard Monitoring IT</h3>
                     <p class="project-description">
                         Visualisation des performances systèmes avec alertes automatiques.
                     </p>
                     <div class="project-features">
-                        <h4>Fonctionnalités :</h4>
+                        <h4>Fonctionnalités</h4>
                         <ul>
                             <li>Visualisation performances systèmes</li>
                             <li>Alertes automatiques</li>
@@ -297,17 +379,18 @@
     <section id="education" class="section education">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-number">06</span>
+                <span class="section-number">05</span>
+                <span class="section-line"></span>
                 <span class="section-text">Formation</span>
             </h2>
             <div class="education-grid">
                 <div class="education-card">
-                    <div class="education-icon">🎓</div>
+                    <div class="education-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Master Génie Logiciel</h3>
                     <p class="education-institution">ESP Dakar</p>
                 </div>
                 <div class="education-card">
-                    <div class="education-icon">🎓</div>
+                    <div class="education-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Licence Réseaux & Télécom</h3>
                     <p class="education-institution">UADB</p>
                 </div>
@@ -319,46 +402,62 @@
     <section id="contact" class="section contact">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-number">07</span>
+                <span class="section-number">06</span>
+                <span class="section-line"></span>
                 <span class="section-text">Contact</span>
             </h2>
-            <div class="contact-content">
+            <div class="contact-wrapper">
+                <div class="contact-intro">
+                    <h3>Travaillons ensemble</h3>
+                    <p>Vous avez un projet en tête ? N'hésitez pas à me contacter, je serais ravi d'en discuter.</p>
+                </div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <div class="contact-icon-wrap"><i class="fas fa-phone"></i></div>
                         <div>
                             <h4>Téléphone</h4>
                             <a href="tel:+221773031358">+221 77 303 13 58</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <div class="contact-icon-wrap"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
                             <a href="mailto:secka1348@gmail.com">secka1348@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Localisation</h4>
                             <p>Sénégal</p>
                         </div>
                     </div>
                 </div>
+                <a href="mailto:secka1348@gmail.com" class="btn btn-primary btn-contact-cta">
+                    <i class="fas fa-envelope"></i>
+                    Envoyer un message
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="nav-brand-dot"></span>
+                Abdoulaye Seck
+            </div>
             <p>&copy; 2025 Abdoulaye Seck. Tous droits réservés.</p>
-            <p class="footer-note">Portfolio professionnel - Ingénieur Full Stack</p>
+            <p class="footer-note">Ingénieur Full Stack — Java · Spring Boot · Angular</p>
         </div>
     </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
 </html>
-
